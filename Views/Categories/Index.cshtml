@@ -1,0 +1,40 @@
+﻿@model List<Category>
+<h2>All categories</h2>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th style="width: 10px">#</th>
+            <th>Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (!Model.Any())
+        {
+            <tr>
+                <td colspan="2">
+            <div class="alert alert-warning alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                <h5><i class="icon fas fa-exclamation-triangle"></i> Alert!</h5>
+               There is no categories
+					</div>
+				</td>
+            </tr>
+        }
+        else
+        {
+            
+       
+        @foreach(var item in Model)
+        {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            
+        </tr>
+
+		} }
+        
+        
+        
+    </tbody>
+</table>
