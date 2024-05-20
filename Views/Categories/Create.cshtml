@@ -1,0 +1,23 @@
+﻿@using BookStore.ViewModel;
+@model CategoryVM
+
+@section Title{
+    Categories
+}
+@section SubTitle{
+    Create Category
+}
+@*asp-for shoud be Name  as in model category --> Name*@
+<form asp-controller="Categories">
+	<div class="card-body">
+		<div class="form-group">
+			<label asp-for="Name"></label>
+			<input type="text" class="form-control" asp-for="Name"/>
+			<span asp-validation-for="Name" class="text-danger"></span>
+		</div>
+	</div>
+		<div class="card-footer">
+			<button type="submit" class="btn btn-outline-primary"> Add</button>
+		</div>
+</form>
+

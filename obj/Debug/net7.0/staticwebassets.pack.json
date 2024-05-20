@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\BookStore.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\dell\\Desktop\\BackEnd\\BookStore\\wwwroot\\css\\main.css",
+      "PackagePath": "staticwebassets\\css\\main.css"
+    },
+    {
       "Id": "C:\\Users\\dell\\Desktop\\BackEnd\\BookStore\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },

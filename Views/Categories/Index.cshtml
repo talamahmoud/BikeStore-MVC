@@ -1,10 +1,22 @@
 ﻿@model List<Category>
-<h2>All categories</h2>
+@section Title{
+    Categories
+}
+@section SubTitle{
+    View Categories
+}
+@section Buttons{
+    <a asp-controller="Categories" asp-action="Create" class="btn btn-outline-primary"> Create </a>
+}
+@*<h2 class="ps-3">All categories</h2>*@
+<div class="card-body">
 <table class="table table-bordered">
     <thead>
         <tr>
             <th style="width: 10px">#</th>
             <th>Name</th>
+            <th>Action</th>
+
         </tr>
     </thead>
     <tbody>
@@ -29,6 +41,9 @@
         <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
+            <td>
+                <a asp-controller="Categories" asp-action="Edit" asp-route-id="@item.Id" class="btn btn-outline-warning">Edit</a>
+            </td>
             
         </tr>
 
@@ -38,3 +53,4 @@
         
     </tbody>
 </table>
+</div>

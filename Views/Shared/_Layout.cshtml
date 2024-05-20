@@ -15,6 +15,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <link rel="stylesheet" href="~/dashboard/plugins/fontawesome-free/css/all.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="~/dashboard/dist/css/adminlte.min.css">
+    <!-- Main Css Style -->
+    <link rel="stylesheet" href="~/css/main.css">
+
 </head>
 <body class="hold-transition sidebar-mini">
 <div class="wrapper">
@@ -249,7 +252,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Starter Page</h1>
+            <h1 class="m-0">@RenderSection("Title")</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -268,13 +271,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <div class="row">
             <div class = "col-12">
             <div class="card">
-              <div class="card-header">
-                <h5 class="m-0">Featured</h5>
+              <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="m-0">@RenderSection("SubTitle")</h5>
+                <div>@RenderSection("Buttons",false)</div>
               </div>
-              <div class="card-body">
+              
                     @RenderBody()
                 
-              </div>
             </div>
           </div>
         </div>
